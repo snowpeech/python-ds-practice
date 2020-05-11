@@ -15,7 +15,20 @@ def read_file_list(filename):
 
     It will raise an error if the file cannot be found.
     """
-
+    with open(filename) as f:
+        read_data = f.read()
+    
+    # f = open(filename, "r")
+    # print(f.read())
     # hint: when you read lines of files, there will be a "newline"
     # (end-of-line character) at the end of each line, and you want to
     # strip that off before you print it. Do some research on that!
+    
+    # solution
+    # with open(filename) as f:
+    #     for line in f:
+    #         # remove newline at end of line!
+    #         line = line.strip()
+    #         print(f"- {line}")
+
+read_file_list("dogs")
